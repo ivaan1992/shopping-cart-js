@@ -64,27 +64,8 @@ function mostrarProductos() {
 
 
 function eliminarDuplicados() {
-    contenedorCarrito.innerHTML = '';
+
+    while(contenedorCarrito.firstChild) {
+        contenedorCarrito.removeChild(contenedorCarrito.firstChild);
+    }
 }
-
-/*
-
-//Mostrar los productos en el carrito
-
-function mostrarProductos() {
-    articulosCarrito.forEach( (curso) => {
-        const row = document.createElement('tr');
-        row.innerHTML = 
-        `
-        <td>
-        ${curso.titulo}
-        </td>
-        `;
-
-        // Mostrar la lista de cursos agregados en el carrito.
-        contenedorCarrito.appendChild(row)
-
-    });
-}
-
-*/
